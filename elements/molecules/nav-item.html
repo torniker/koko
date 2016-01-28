@@ -1,0 +1,22 @@
+<dom-module id="nav-item">
+<template>
+    <li class$="{{ setClass(active) }}">
+        <a href="#{{href}}" ><content></content></a>
+    </li>
+</template>
+<script>
+    Polymer({
+        is: "nav-item",
+        properties: {
+            active: { type: Boolean },
+            href: { type: String }
+        },
+        setClass(isActive) {
+            if(isActive) {
+                return 'active';
+            }
+            return '';
+        },
+    });
+</script>
+</dom-module>

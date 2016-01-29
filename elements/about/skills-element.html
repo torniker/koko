@@ -1,31 +1,129 @@
 <dom-module id="skills-element">
 <template>
-    <div id="skills">
-        <div class="page-header">
-            <h2><i class="fa fa-laptop"></i> Computer Skills</h2>
+    <style>
+        #skills h2 {
+            margin-bottom: 23px;
+            color: #eee;
+            font-family: 'Ubuntu';
+        }
+        #skills .skill-title {
+            background:#4caf50;
+        }
+        #skills .skill-list {
+            margin:25px 50px 25px 40px;
+            overflow: auto;
+            position: relative;
+            height: 45px;
+        }
+        #skills .skill-list::-webkit-scrollbar { 
+            display: none; 
+        }
+        #skills .skill-list a {
+            
+            font-size: 1.3em;
+        }
+        #skills .skill-list .scrollable {
+            position: absolute;
+            white-space: nowrap;
+        }
+        #skills .scroll-arrows {
+            position: absolute;
+            top: 20px;
+        }
+        #skills .scroll-right {
+            left: 0px;
+        }
+        #skills .scroll-left {
+            right: 10px;
+        }
+        #skills .scroll-arrows a {
+            display: inline-block;
+            font-size: 1.8em;
+            border: none;
+            box-shadow: none;
+            color: #333;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
+    <div class="container-fluid">
+        <div id="skills" class="row bg-success">
+            <div class="nowrap skill-title col-xs-12 col-md-2">
+                <h2><i class="fa fa-laptop"></i> Skills</h2>
+            </div>
+            <div class="col-xs-12 col-md-10 scroll-container">
+                <div id="scollRight" class="scroll-arrows scroll-right text-center">
+                    <a href="#" class="btn"><i class="fa fa-chevron-left"></i></a>
+                </div>
+                <div class="skill-list" id="skillList">
+                    <div id="scrollable" class="scrollable">
+                        <a href="http://php.net/" class="btn btn-link"><i class="fa fa-circle-o"></i> PHP</a>
+                        <a href="http://laravel.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> Laravel</a>
+                        <a href="http://www.codeigniter.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> CodeIgniter</a>
+                        <a href="https://en.wikipedia.org/wiki/SQL" class="btn btn-link"><i class="fa fa-circle-o"></i> SQL Databases</a>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link"><i class="fa fa-circle-o"></i> JavaScript (ES 6/7)</a>
+                        <a href="http://vuejs.org/" class="btn btn-link"><i class="fa fa-circle-o"></i> Vue.js</a>
+                        <a href="https://www.polymer-project.org/1.0/" class="btn btn-link"><i class="fa fa-circle-o"></i> Polymer</a>
+                        <a href="https://www.docker.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> Docker</a>
+                        <a href="https://laravel.com/docs/master/homestead" class="btn btn-link"><i class="fa fa-circle-o"></i> Vagrant (Homestead)</a>
+                        <a href="https://en.wikipedia.org/wiki/NoSQL" class="btn btn-link"><i class="fa fa-circle-o"></i> NoSQL</a>
+                        <a href="https://nodejs.org/en/" class="btn btn-link"><i class="fa fa-circle-o"></i> Node.js</a>
+                        <a class="btn btn-link"><i class="fa fa-circle-o"></i> HTML / CSS</a>
+                        <a class="btn btn-link"><i class="fa fa-circle-o"></i> SASS / LESS</a>
+                        <a href="http://developer.android.com/index.html" class="btn btn-link"><i class="fa fa-circle-o"></i> Android Development</a>
+                        <a href="https://www.oracle.com/java/index.html" class="btn btn-link"><i class="fa fa-circle-o"></i> Java</a>
+                    </div>
+                    
+                </div>
+                <div id="scollLeft" class="scroll-arrows scroll-left text-center">
+                    <a href="#" class="btn"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
         </div>
-        <ul class="nav nav-pills ">
-            <li><a href="http://php.net/"><i class="fa fa-circle-o"></i> PHP</a></li>
-            <li><a href="http://laravel.com/"><i class="fa fa-circle-o"></i> Laravel</a></li>
-            <li><a href="http://www.codeigniter.com/"><i class="fa fa-circle-o"></i> CodeIgniter</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/SQL"><i class="fa fa-circle-o"></i> SQL Databases</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/NoSQL"><i class="fa fa-circle-o"></i> NoSQL</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/JavaScript"><i class="fa fa-circle-o"></i> JavaScript (ES 6/7)</a></li>
-            <li><a href="http://vuejs.org/"><i class="fa fa-circle-o"></i> Vue.js</a></li>
-            <li><a href="https://www.polymer-project.org/1.0/"><i class="fa fa-circle-o"></i> Polymer</a></li>
-            <li><a href="https://nodejs.org/en/"><i class="fa fa-circle-o"></i> Node.js</a></li>
-            <li><a><i class="fa fa-circle-o"></i> HTML / CSS</a></li>
-            <li><a><i class="fa fa-circle-o"></i> SASS / LESS</a></li>
-            <li><a href="https://www.docker.com/"><i class="fa fa-circle-o"></i> Docker</a></li>
-            <li><a href="https://laravel.com/docs/master/homestead"><i class="fa fa-circle-o"></i> Vagrant (Homestead)</a></li>
-            <li><a href="http://developer.android.com/index.html"><i class="fa fa-circle-o"></i> Android Development</a></li>
-            <li><a href="https://www.oracle.com/java/index.html"><i class="fa fa-circle-o"></i> Java</a></li>
-        </ul>
     </div>
 </template>
 <script>
     Polymer({
         is: "skills-element",
+        properties: {
+            scrollStep: {
+                type: Number,
+                value: 300
+            }
+        },
+        listeners: {
+            'scollLeft.tap': 'scrollLeft',
+            'scollRight.tap': 'scrollRight'
+        },
+        scrollLeft: function(e) {
+            e.preventDefault();
+            var scrollPos = this.$.skillList.scrollLeft;
+            var width = this.$.scrollable.offsetWidth;
+            var scrollTo = scrollPos;
+            if(width < this.scrollStep + scrollTo) {
+                scrollTo = width;
+            } else {
+                scrollTo += this.scrollStep
+            }
+            this.scrollTo(scrollTo);
+        },
+        scrollRight: function(e) {
+            e.preventDefault();
+            var scrollPos = this.$.skillList.scrollLeft;
+            var scrollTo = scrollPos;
+            if(this.scrollTo - this.scrollStep < 0) {
+                scrollTo = 0;
+            } else {
+                scrollTo -= this.scrollStep
+            }
+            this.scrollTo(scrollTo);
+        }, 
+        scrollTo: function(scrollTo) {
+            $(this.$.skillList).animate({
+                scrollLeft: scrollTo
+            }, 200);
+        }
     });
 </script>
 

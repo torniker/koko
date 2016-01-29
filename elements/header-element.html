@@ -50,8 +50,8 @@
         properties: {
             selected: { type: String },
         },
-        isActive: function(a, b) {
-            if(a == b) {
+        isActive: function(item, selected) {
+            if(item == selected) {
                 return 'active';
             }
             return '';

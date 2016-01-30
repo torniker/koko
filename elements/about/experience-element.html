@@ -1,79 +1,149 @@
 <dom-module id="experience-element">
 <template>
+    <style>
+        .xpcompanies {
+            font-size: 1.25em;
+        }
+        #experience {
+            height: 470px;
+        }
+    </style>
     <div id="experience" class="container">
         <div class="page-header">
             <h2><i class="fa fa-briefcase"></i> Work Experience</h2>
         </div>
-        <h3 class="page-header">
-            <a href="http://www.itdc.ge/index.php?lang_id=ENG&sec_id=2">IT Development Center</a> <small>ITDC</small>
-        </h3>
-        <p>
-            <strong>About:</strong> Group of professional programmers, designers, and IT experts,
-            who develop veriety of products starting from promotional websites ending with complex systems in order to simplify or automate various business processes.
-        </p>
-
-        <h4 class="page-header">
-            Trainer
-            <small>2012 - present</small>
-        </h4>
-        <strong>Responsibilities:</strong>
-        <ul>
-            <li>Create course syllabuses of Interface Development</li>
-            <li>Create course syllabuses of Web Programming and Databases</li>
-            <li>Supervisor of "Interface Development" trainers</li>
-            <li>"Web Programming and Databases" trainer</li>
-        </ul>
-        <h4 class="page-header">
-            Senior Developer <small>2008 - present</small>
-        </h4>
-        <strong>Responsibilities:</strong>
-        <ul>
-            <li>Analyze and Provide the business process recommendations in frame of project to the customer</li>
-            <li>Lead the team of project that involves 3-5 members</li>
-            <li>Instruct and assist the group members</li>
-            <li>Assign tasks to the members of the team</li>
-        </ul>
-        <h4 class="page-header">
-            Developer <small>2006 - 2008</small>
-        </h4>
-        <strong>Responsibilities:</strong>
-        <ul>
-            <li>Analyze assigned task</li>
-            <li>Develop appropriate web-application or web-site</li>
-        </ul>
-
-        <h3 class="page-header">
-            <a href="http://oceandna.ge/">Georgian Designated National Agency for International Data and Information exchange</a>
-        </h3>
-        <p>
-            <strong>About:</strong> Designated National Agency operates within the Centre of Relations with UNESCO of the Ivane Javakhishvili Tbilisi State University
-        </p>
-        <h4 class="page-header">Data Manager / Programmer / Server Admin <small>2006 - present</small></h4>
-        <strong>Responsibilities:</strong>
-        <ul>
-            <li>Process, store and disseminate the marine data and metadata sampled by Georgian institutes and agencies</li>
-            <li>Communicate with foreign partners</li>
-            <li>Discuss and create formats according to suitable standard</li>
-            <li>Participate in standard creation together with European partners</li>
-        </ul>
-
-        <h3 class="page-header">
-            <a href="http://iliauni.edu.ge/en/">Ilia State University</a>
-        </h3>
-        <p><strong>About:</strong> Ilia State University is one of the biggest universities in Georgia.</p>
-        <h4 class="page-header">Lecturer <small>2013 - 2014</small></h4>
-        <p>
-            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL.
-        </p>
-
-        <h3 class="page-header">
-            <a href="http://www.ibsu.edu.ge/en/index.php/en/">Black Sea International University</a>
-        </h3>
-        <p><strong>About:</strong> Black Sea International University has the objective of training Georgian and foreign students in scientific, technical and professional fields of study.</p>
-        <h4 class="page-header">Lecturer <small>2013 - 2014</small></h4>
-        <p>
-            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL. The language of instruction has been English
-        </p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <ul class="nav nav-tabs nav-stacked xpcompanies" role="tablist">
+                    <li class="active">
+                        <a href="#xpitdc" role="tab" data-toggle="tab">
+                            ITDC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#xpgeodna" role="tab" data-toggle="tab">GeoDNA</a>
+                    </li>
+                    <li>
+                        <a href="#xpilia" role="tab" data-toggle="tab">Ilia State University</a>
+                    </li>
+                    <li>
+                        <a href="#xpibsu" role="tab" data-toggle="tab">International Black Sea Univrsity</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="xpitdc">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel">
+                            <div class="panel-heading" role="tab">
+                                <h5 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdcsenior">
+                                        Senior Developer <small>2008 - present</small>
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="itdcsenior" class="collapse in" role="tabpanel">
+                                <div class="panel-body">
+                                    <strong>Responsibilities:</strong>
+                                    <ul>
+                                        <li>Analyze and Provide the business process recommendations in frame of project to the customer</li>
+                                        <li>Lead the team of project that involves 3-5 members</li>
+                                        <li>Instruct and assist the group members</li>
+                                        <li>Assign tasks to the members of the team</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" role="tab">
+                                <h5 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdctrainer">
+                                        Trainer <small>2012 - present</small>
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="itdctrainer" class="collapse" role="tabpanel">
+                                <div class="panel-body">
+                                    <strong>Responsibilities:</strong>
+                                    <ul>
+                                        <li>Create course syllabuses of Interface Development</li>
+                                        <li>Create course syllabuses of Web Programming and Databases</li>
+                                        <li>Supervisor of "Interface Development" trainers</li>
+                                        <li>"Web Programming and Databases" trainer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" role="tab">
+                                <h5 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdcdeveloper">
+                                        Developer <small>2006 - 2008</small>
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="itdcdeveloper" class="collapse" role="tabpanel">
+                                <div class="panel-body">
+                                    <strong>Responsibilities:</strong>
+                                    <ul>
+                                        <li>Analyze assigned task</li>
+                                        <li>Develop appropriate web-application or web-site</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="xpgeodna">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <a role="button" href="#geodnaxp">
+                                    Data Manager / Programmer / Server Admin <small>2006 - present</small>
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="panel-body">
+                            <strong>Responsibilities:</strong>
+                            <ul>
+                                <li>Process, store and disseminate the marine data and metadata sampled by Georgian institutes and agencies</li>
+                                <li>Communicate with foreign partners</li>
+                                <li>Discuss and create formats according to suitable standard</li>
+                                <li>Participate in standard creation together with European partners</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="xpilia">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <a role="button" href="#geodnaxp">
+                                    Lecturer <small>2013 - 2014</small>
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="panel-body">
+                            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL.
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="xpibsu">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <a role="button" href="#geodnaxp">
+                                    Lecturer <small>2013 - 2014</small>
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="panel-body">
+                            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL. The language of instruction has been English
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>

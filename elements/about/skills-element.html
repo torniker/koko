@@ -1,16 +1,21 @@
 <dom-module id="skills-element">
 <template>
     <style>
+        #skills {
+            
+        }
         #skills h2 {
             margin-bottom: 23px;
-            color: #eee;
+            color: #f9f9f9;
             font-family: 'Ubuntu';
+            text-align: center;
         }
         #skills .skill-title {
-            background:#4caf50;
+            background:#2196f3;
+            box-shadow: 3px 0px 2px rgba(0,0,0,0.3);
         }
         #skills .skill-list {
-            margin:25px 50px 25px 40px;
+            margin:25px 50px 25px 50px;
             overflow: auto;
             position: relative;
             height: 45px;
@@ -31,7 +36,7 @@
             top: 20px;
         }
         #skills .scroll-right {
-            left: 0px;
+            left: 10px;
         }
         #skills .scroll-left {
             right: 10px;
@@ -48,36 +53,36 @@
         }
     </style>
     <div class="container-fluid">
-        <div id="skills" class="row bg-success">
+        <div id="skills" class="row">
             <div class="nowrap skill-title col-xs-12 col-md-2">
                 <h2><i class="fa fa-laptop"></i> Skills</h2>
             </div>
             <div class="col-xs-12 col-md-10 scroll-container">
-                <div id="scollRight" class="scroll-arrows scroll-right text-center">
-                    <a href="#" class="btn"><i class="fa fa-chevron-left"></i></a>
+                <div class="scroll-arrows scroll-right text-center">
+                    <a id="scollRight" class="btn btn-default"><i class="fa fa-chevron-left"></i></a>
                 </div>
                 <div class="skill-list" id="skillList">
                     <div id="scrollable" class="scrollable">
-                        <a href="http://php.net/" class="btn btn-link"><i class="fa fa-circle-o"></i> PHP</a>
-                        <a href="http://laravel.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> Laravel</a>
-                        <a href="http://www.codeigniter.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> CodeIgniter</a>
-                        <a href="https://en.wikipedia.org/wiki/SQL" class="btn btn-link"><i class="fa fa-circle-o"></i> SQL Databases</a>
-                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link"><i class="fa fa-circle-o"></i> JavaScript (ES 6/7)</a>
-                        <a href="http://vuejs.org/" class="btn btn-link"><i class="fa fa-circle-o"></i> Vue.js</a>
-                        <a href="https://www.polymer-project.org/1.0/" class="btn btn-link"><i class="fa fa-circle-o"></i> Polymer</a>
-                        <a href="https://www.docker.com/" class="btn btn-link"><i class="fa fa-circle-o"></i> Docker</a>
-                        <a href="https://laravel.com/docs/master/homestead" class="btn btn-link"><i class="fa fa-circle-o"></i> Vagrant (Homestead)</a>
-                        <a href="https://en.wikipedia.org/wiki/NoSQL" class="btn btn-link"><i class="fa fa-circle-o"></i> NoSQL</a>
-                        <a href="https://nodejs.org/en/" class="btn btn-link"><i class="fa fa-circle-o"></i> Node.js</a>
-                        <a class="btn btn-link"><i class="fa fa-circle-o"></i> HTML / CSS</a>
-                        <a class="btn btn-link"><i class="fa fa-circle-o"></i> SASS / LESS</a>
-                        <a href="http://developer.android.com/index.html" class="btn btn-link"><i class="fa fa-circle-o"></i> Android Development</a>
-                        <a href="https://www.oracle.com/java/index.html" class="btn btn-link"><i class="fa fa-circle-o"></i> Java</a>
+                        <a href="http://php.net/" class="btn btn-link">PHP</a>
+                        <a href="http://laravel.com/" class="btn btn-link">Laravel</a>
+                        <a href="http://www.codeigniter.com/" class="btn btn-link">CodeIgniter</a>
+                        <a href="https://en.wikipedia.org/wiki/SQL" class="btn btn-link">SQL Databases</a>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link">JavaScript (ES 6/7)</a>
+                        <a href="http://vuejs.org/" class="btn btn-link">Vue.js</a>
+                        <a href="https://www.polymer-project.org/1.0/" class="btn btn-link">Polymer</a>
+                        <a href="https://www.docker.com/" class="btn btn-link">Docker</a>
+                        <a href="https://laravel.com/docs/master/homestead" class="btn btn-link">Vagrant (Homestead)</a>
+                        <a href="https://en.wikipedia.org/wiki/NoSQL" class="btn btn-link">NoSQL</a>
+                        <a href="https://nodejs.org/en/" class="btn btn-link">Node.js</a>
+                        <a class="btn btn-link">HTML / CSS</a>
+                        <a class="btn btn-link">SASS / LESS</a>
+                        <a href="http://developer.android.com/index.html" class="btn btn-link">Android Development</a>
+                        <a href="https://www.oracle.com/java/index.html" class="btn btn-link">Java</a>
                     </div>
                     
                 </div>
-                <div id="scollLeft" class="scroll-arrows scroll-left text-center">
-                    <a href="#" class="btn"><i class="fa fa-chevron-right"></i></a>
+                <div class="scroll-arrows scroll-left text-center">
+                    <a id="scollLeft" class="btn btn-default"><i class="fa fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>

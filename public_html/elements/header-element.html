@@ -21,13 +21,31 @@
                         <li class$="{{ isActive('about', selected) }}">
                             <a href="#/" >About Me</a>
                         </li>
-                        <!-- <li class$="{{ isActive('notes', selected) }}"><a href="#/notes">Notes</a></li> -->
                         <li class$="dropdown {{ isActive('notes', selected) }}">
-                            <a role="button" class="dropdown-toggle" data-toggle="notesLinks">
+                            <a role="button" id="notesLink" data-toggle="notesLinks">
                                 Notes <span class="caret"></span>
                             </a>
                             <ul id="notesLinks" class="dropdown-menu" >
                                 <li class$="{{ isActive('my-sublime-setup-for-php-development', subSelected) }}"><a href="#/notes/my-sublime-setup-for-php-development">My Sublime Setup for PHP Development</a></li>
+                            </ul>
+                        </li>
+                        <li class$="dropdown {{ isActive('micro-services', selected) }}">
+                            <a role="button" id="microServicesLink" data-toggle="microServicesLinks">
+                                Micro Services <span class="caret"></span>
+                            </a>
+                            <ul id="microServicesLinks" class="dropdown-menu" >
+                                <li class$="{{ isActive('client-info', subSelected) }}">
+                                    <a href="#/micro-services/client-info">Client Info</a>
+                                </li>
+                                <li class$="{{ isActive('date-converter', subSelected) }}">
+                                    <a href="#/micro-services/date-converter">Date Converter</a>
+                                </li>
+                                <li class$="{{ isActive('password-generator', subSelected) }}">
+                                    <a href="#/micro-services/password-generator">Password Generator</a>
+                                </li>
+                                <li class$="{{ isActive('password-hasher', subSelected) }}">
+                                    <a href="#/micro-services/password-hasher">Password Hasher</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -62,10 +80,12 @@
             }
         },
         ready: function() {
-            this.$$('.dropdown-toggle').addEventListener('click', function (e) {
-                var toggle = $(this).data('toggle');
-                $('#'+toggle).toggle();
-            })
+            this.$.notesLink.addEventListener('click', this.toggleSubs);
+            this.$.microServicesLink.addEventListener('click', this.toggleSubs)
+        },
+        toggleSubs: function(e) {
+            var toggle = $(this).data('toggle');
+            $('#'+toggle).toggle();
         },
         isActive: function(item, selected) {
             if(item == selected) {

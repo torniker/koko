@@ -6,7 +6,7 @@
             display: none;
         }
     </style>
-    <header-element selected="notes"></header-element>
+    <header-element selected="notes" sub-selected="{{ slug }}"></header-element>
     <div id="noteContainer"></div>
     <div id="pageNotFound">
         <not-found-page></not-found-page>
@@ -24,7 +24,7 @@
                 //newElement.myProperty = 'foo';
                 Polymer.dom(this.$.noteContainer).appendChild(newElement);
             }, function(e) {
-              this.$.pageNotFound.style.display = 'block';
+                this.$.pageNotFound.style.display = 'block';
             });
         }
     });

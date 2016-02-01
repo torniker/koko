@@ -1,11 +1,32 @@
+<link rel="import" href="not-found-page.html">
 <dom-module id="notes-element">
 <template>
+    <style>
+        #pageNotFound {
+            display: none;
+        }
+    </style>
     <header-element selected="notes"></header-element>
-    Notes
+    <div id="noteContainer"></div>
+    <div id="pageNotFound">
+        <not-found-page></not-found-page>
+    </div>
 </template>
 <script>
     Polymer({
         is: "notes-element",
+        properties: {
+            slug: { type: String },
+        },
+        attached: function() {
+            this.importHref('elements/notes/'+ this.slug +'.html', function(e) {
+                var newElement = document.createElement(this.slug);
+                //newElement.myProperty = 'foo';
+                Polymer.dom(this.$.noteContainer).appendChild(newElement);
+            }, function(e) {
+              this.$.pageNotFound.style.display = 'block';
+            });
+        }
     });
 </script>
 </dom-module>

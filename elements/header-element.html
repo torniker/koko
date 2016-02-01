@@ -1,11 +1,8 @@
 <dom-module id="header-element">
 <template>
     <style>
-        .navbar {
-            opacity: 0.9;
-        }
     </style>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default ">
         <div class="container">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -24,7 +21,15 @@
                         <li class$="{{ isActive('about', selected) }}">
                             <a href="#/" >About Me</a>
                         </li>
-                        <li class$="{{ isActive('notes', selected) }}"><a href="#/notes">Notes</a></li>
+                        <!-- <li class$="{{ isActive('notes', selected) }}"><a href="#/notes">Notes</a></li> -->
+                        <li class$="dropdown {{ isActive('notes', selected) }}">
+                            <a role="button" class="dropdown-toggle" data-toggle="notesLinks">
+                                Notes <span class="caret"></span>
+                            </a>
+                            <ul id="notesLinks" class="dropdown-menu" >
+                                <li class$="{{ isActive('my-sublime-setup-for-php-development', subSelected) }}"><a href="#/notes/my-sublime-setup-for-php-development">My Sublime Setup for PHP Development</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -51,6 +56,16 @@
         is: "header-element",
         properties: {
             selected: { type: String },
+            subSelected: {
+                type: String,
+                value: ''
+            }
+        },
+        ready: function() {
+            this.$$('.dropdown-toggle').addEventListener('click', function (e) {
+                var toggle = $(this).data('toggle');
+                $('#'+toggle).toggle();
+            })
         },
         isActive: function(item, selected) {
             if(item == selected) {

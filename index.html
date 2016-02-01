@@ -22,21 +22,10 @@
 </head>
 <body unresolved>
     <app-router>
-      <app-route path="/" import="/elements/about-element.html"></app-route>
-      <app-route path="/notes" import="/elements/notes-element.html"></app-route>
-      <app-route path="*" import="/pages/not-found-page.html"></app-route>
+        <app-route path="/" import="/elements/about-element.html"></app-route>
+        <app-route path="/notes/:slug" import="/elements/notes-element.html"></app-route>
+        <app-route path="*" import="/elements/not-found-page.html"></app-route>
     </app-router>
-    
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Main -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2731339396612636"
-         data-ad-slot="7378566933"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

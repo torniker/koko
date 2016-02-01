@@ -1,0 +1,29 @@
+<dom-module id="stacked-list-item">
+<template>
+    <style>
+        small {
+            font-size: 65%;
+            color: #bbbbbb;
+        }
+    </style>
+    <content></content>
+    <small>{{ small }}</small>
+    <span class="pull-right"><i class$="fa {{ icon }}"></i></span>
+</template>
+<script>
+    Polymer({
+        is: "stacked-list-item",
+        properties: {
+            icon: {
+                type: String,
+                value: ''
+            },
+            small: {
+                type:String,
+                value: ''
+            }
+        },
+    });
+</script>
+
+</dom-module>

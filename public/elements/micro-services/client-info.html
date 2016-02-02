@@ -1,3 +1,4 @@
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
 <dom-module id="client-info">
 <template>
     <style>
@@ -5,20 +6,47 @@
             margin-top: -30px;
         }
     </style>
+    <iron-ajax
+            auto
+            url="{{ url }}"
+            params=""
+            handleAs="json"
+            on-response="handleResponse"
+            method='GET'>
+    </iron-ajax>
     <div class="jumbotron">
         <div class="container">
             <h1>
                 Client Info
             </h1>
-            <p>
-                Will be available soon.
-            </p>
+            
         </div>
+    </div>
+    <div class="container">
+        <p>
+            Your IP Address: {{ data.ip }}
+        </p>
+        <p>
+            Your User Agent: {{ data.userAgent }}
+        </p>
     </div>
 </template>
 <script>
     Polymer({
         is: "client-info",
+        properties: {
+            url: { 
+                type: String,
+                value: '/api/client-info'
+            },
+            data: {
+                type: Object
+            },
+        },
+        handleResponse: function(e, ajax) {
+            this.data = ajax.response;
+            // this.userAgent = ajax.response.userAgent;
+        }
     });
 </script>
 

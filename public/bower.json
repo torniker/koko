@@ -19,6 +19,6 @@
     "polymer": "Polymer/polymer#^1.2.0",
     "app-router": "^2.6.1",
     "iron-ajax": "PolymerElements/iron-ajax#^1.1.1",
-    "github-gist": "https://github.com/torniker/github-gist.git#^1.2.2"
+    "github-gist": "https://github.com/torniker/github-gist.git#0a8b4928f56790208d79ab1c3eb462f82a21f3cf"
   }
 }

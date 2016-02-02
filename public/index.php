@@ -1,5 +1,4 @@
 <?php
-die('testing tornike.me');
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
@@ -49,12 +48,12 @@ $app->bind('path.public', function () {
 |
  */
 
-// $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-// $response = $kernel->handle(
-//     $request = Illuminate\Http\Request::capture()
-// );
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
 
-// $response->send();
+$response->send();
 
-// $kernel->terminate($request, $response);
+$kernel->terminate($request, $response);

@@ -1,5 +1,5 @@
 <?php
-
+die('testing tornike.me');
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

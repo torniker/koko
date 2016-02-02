@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => 'api'], function () {
     Route::get('client-info', function () {
-        return response($_SERVER);
+        $ret['ip'] = $_SERVER['remote_addr'];
+        $ret['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+        return response($ret);
     });
 });
 

@@ -19,12 +19,12 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h3>
-                    Date in Any Format or Timestamp
-                </h3>
+                <label for="dateInput" class="h5">
+                    Convert Date from Any Format or Timestamp
+                </label>
                 <form on-submit="onSubmit" id="covertDateForm" action="">
                     <div class="input-group">
-                        <input class="form-control input-lg text-center" value="{{ date::input }}">
+                        <input id="dateInput" class="form-control input-lg text-center" value="{{ date::input }}">
                         <span class="input-group-btn">
                             <button class="btn btn-lg btn-default" type="submit">
                                 <i class="fa fa-caret-right"></i>

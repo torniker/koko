@@ -1,6 +1,6 @@
 <link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="/elements/molecules/copy-to-clipboard.html">
-<dom-module id="client-info">
+<dom-module id="user-info">
 <template>
     <style>
         .jumbotron {
@@ -19,9 +19,11 @@
         <div class="container">
             <h1>
                 <i class="fa fa-server"></i>
-                Client Info
+                User Info
             </h1>
-            
+            <p>
+                Know your IP and User Agent. You deserve this.
+            </p>
         </div>
     </div>
     <div class="container">
@@ -55,11 +57,11 @@
 </template>
 <script>
     Polymer({
-        is: "client-info",
+        is: "user-info",
         properties: {
             url: { 
                 type: String,
-                value: '/api/client-info'
+                value: '/api/user-info'
             },
             data: {
                 type: Object

@@ -19,14 +19,16 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class$="{{ isActive('about', selected) }}">
-                            <a href="#/" >About Me</a>
+                            <a href="/" >About Me</a>
                         </li>
                         <li class$="dropdown {{ isActive('notes', selected) }}">
                             <a role="button" id="notesLink" data-toggle="notesLinks">
                                 Notes <span class="caret"></span>
                             </a>
                             <ul id="notesLinks" class="dropdown-menu" >
-                                <li class$="{{ isActive('my-sublime-setup-for-php-development', subSelected) }}"><a href="#/notes/my-sublime-setup-for-php-development">My Sublime Setup for PHP Development</a></li>
+                                <li class$="{{ isActive('my-sublime-setup-for-php-development', subSelected) }}">
+                                    <a href="/notes/my-sublime-setup-for-php-development">My Sublime Setup for PHP Development</a>
+                                </li>
                             </ul>
                         </li>
                         <li class$="dropdown {{ isActive('micro-services', selected) }}">
@@ -35,16 +37,16 @@
                             </a>
                             <ul id="microServicesLinks" class="dropdown-menu" >
                                 <li class$="{{ isActive('user-info', subSelected) }}">
-                                    <a href="#/micro-services/user-info">User Info</a>
+                                    <a href="/micro-services/user-info">User Info</a>
                                 </li>
                                 <li class$="{{ isActive('date-converter', subSelected) }}">
-                                    <a href="#/micro-services/date-converter">Date Converter</a>
+                                    <a href="/micro-services/date-converter">Date Converter</a>
                                 </li>
                                 <li class$="{{ isActive('password-generator', subSelected) }}">
-                                    <a href="#/micro-services/password-generator">Password Generator</a>
+                                    <a href="/micro-services/password-generator">Password Generator</a>
                                 </li>
                                 <li class$="{{ isActive('password-hasher', subSelected) }}">
-                                    <a href="#/micro-services/password-hasher">Password Hasher</a>
+                                    <a href="/micro-services/password-hasher">Password Hasher</a>
                                 </li>
                             </ul>
                         </li>

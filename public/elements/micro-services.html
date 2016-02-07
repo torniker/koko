@@ -19,7 +19,7 @@
             slug: { type: String },
         },
         attached: function() {
-            this.importHref('elements/micro-services/'+ this.slug +'.html', function(e) {
+            this.importHref('/elements/micro-services/'+ this.slug +'.html', function(e) {
                 var newElement = document.createElement(this.slug);
                 //newElement.myProperty = 'foo';
                 Polymer.dom(this.$.microServicesContainer).appendChild(newElement);

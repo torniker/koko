@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+PATH=$PATH:./node_modules/.bin
+
+alias watch="webpack -w & gulp watch"
+alias build="gulp && webpack"
+
+alias gulp="gulp"
+alias webpack="webpack"
+alias eslint="eslint './resources/assets/js/**/*'"
+
+if [[ $1 ]]; then
+    eval "${BASH_ALIASES[$1]} ${@:2}"
+else
+    echo "Tasker - bash alias runner
+
+Usage:
+  command [options] [arguments]
+
+Available commands:
+  gulp                                     gulp.js - the streaming build system
+  webpack                                  webpack module bundler
+  watch                                    run webpack and gulp in watch mode
+  build                                    run webpack and gulp
+  eslint                                   ESLint - Pluggable JavaScript linter
+"
+fi

@@ -1,14 +1,79 @@
-<dom-module id="experience-element">
-<template>
-    <style>
-        .xpcompanies {
-            font-size: 1.25em;
-        }
-        #experience {
-            height: 470px;
-        }
-    </style>
-    <div id="experience" class="container">
+@extends('layouts.master')
+
+@section('title', 'About - Tornike Razmadze')
+
+@section('content')
+    <div class="jumbotron no-bottom-margin">
+        <div class="container">
+            <h1>
+                About Me
+            </h1>
+            <p>
+                Developer since 2001. Always in search of something new and eager to study and become a better professional.
+                Fullstack Developer. Enjoy sharing information and experience. Think that is a way of learning something new.
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="nowrap row-left-title col-xs-12 col-md-2">
+                <h2><i class="fa fa-laptop"></i> Skills</h2>
+            </div>
+            <div class="col-xs-12 col-md-10 scroll-container">
+                <div class="scroll-arrow scroll-right text-center">
+                    <a class="btn btn-default arrow-right"><i class="fa fa-chevron-left"></i></a>
+                </div>
+                <div class="skill-list">
+                    <div class="scrollable">
+                        <a href="http://php.net/" class="btn btn-link">PHP</a>
+                        <a href="http://laravel.com/" class="btn btn-link">Laravel</a>
+                        <a href="http://www.codeigniter.com/" class="btn btn-link">CodeIgniter</a>
+                        <a href="https://en.wikipedia.org/wiki/SQL" class="btn btn-link">SQL Databases</a>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link">JavaScript (ES 6/7)</a>
+                        <a href="http://vuejs.org/" class="btn btn-link">Vue.js</a>
+                        <a href="https://www.polymer-project.org/1.0/" class="btn btn-link">Polymer</a>
+                        <a href="https://www.docker.com/" class="btn btn-link">Docker</a>
+                        <a href="https://laravel.com/docs/master/homestead" class="btn btn-link">Vagrant (Homestead)</a>
+                        <a href="https://en.wikipedia.org/wiki/NoSQL" class="btn btn-link">NoSQL</a>
+                        <a href="https://nodejs.org/en/" class="btn btn-link">Node.js</a>
+                        <a class="btn btn-link">HTML / CSS</a>
+                        <a class="btn btn-link">SASS / LESS</a>
+                        <a href="http://developer.android.com/index.html" class="btn btn-link">Android Development</a>
+                        <a href="https://www.oracle.com/java/index.html" class="btn btn-link">Java</a>
+                    </div>
+                </div>
+                <div class="scroll-arrow scroll-left text-center">
+                    <a class="btn btn-default arrow-left"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                <div class="text-center"><i class="fa fa-code fa-5x"></i></div>
+                <h4>More Then 15 Years of Working Experience</h4>
+                <span class="text-muted">
+                    My first comupter was IBM XT 286. I was seven when we got one.
+                    After that moment I wanted to know everything about computers.
+                    My father did some coding back then and I was sitting next to him
+                    watching all those strange combination of words and symbols and I knew
+                    that I wanted to learn it. From that moment I am learning...
+                </span>
+            </div>
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                <div class="text-center"><i class="fa fa-briefcase fa-5x"></i></div>
+                <h4>Developed More Then 200 Projects</h4>
+                <span class="text-muted">
+                    Worked in several web development companies.
+                    Created several custom made content management systems and worked with open source ones.
+                    Grown from working on simple projects by myself to
+                    being a team leader in the biggest web development company in Georgia.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container experience">
         <div class="page-header">
             <h2><i class="fa fa-briefcase"></i> Work Experience</h2>
         </div>
@@ -16,25 +81,25 @@
             <div class="col-xs-12 col-sm-6">
                 <ul class="nav nav-tabs nav-stacked xpcompanies" role="tablist">
                     <li class="active">
-                        <a href="#xpitdc" role="tab" data-toggle="tab">
+                        <a href="#xpitdc" role="tab" data-toggle="tab" class="h5">
                             ITDC
                             <span class="pull-right"><i class="fa fa-caret-right"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#xpgeodna" role="tab" data-toggle="tab">
+                        <a href="#xpgeodna" role="tab" data-toggle="tab" class="h5">
                             GeoDNA
                             <span class="pull-right"><i class="fa fa-caret-right"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#xpilia" role="tab" data-toggle="tab">
+                        <a href="#xpilia" role="tab" data-toggle="tab" class="h5">
                             Ilia State University
                             <span class="pull-right"><i class="fa fa-caret-right"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#xpibsu" role="tab" data-toggle="tab">
+                        <a href="#xpibsu" role="tab" data-toggle="tab" class="h5">
                             International Black Sea Univrsity
                             <span class="pull-right"><i class="fa fa-caret-right"></i></span>
                         </a>
@@ -155,10 +220,69 @@
             </div>
         </div>
     </div>
-</template>
-<script>
-    Polymer({
-        is: "experience-element",
-    });
-</script>
-</dom-module>
+    <div class="jumbotron no-bottom-margin">
+        <div id="education" class="container">
+            <h2 class="text-center"><i class="fa fa-university"></i> Education</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 placeholder text-center">
+                    <h4>
+                        Ilia State University
+                        <small>2009 - 2012</small>
+                    </h4>
+                    <span class="text-muted">
+                        Master’s degree studies in Calculus Mathematics and Informatics
+                    </span>
+                    <br />
+                    <br />
+                    <p>
+                        <a href="http://iliauni.edu.ge/en/" target="_blank" class="btn btn-primary">
+                            Visit Website <i class="fa fa-external-link"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 placeholder text-center">
+                    <h4>
+                        Iv. Javakhishvili Tbilisi State University
+                        <small>2003 - 2008</small>
+                    </h4>
+                    <span class="text-muted">
+                        Bachelor’s Degree in Applied Mathematics and Computer Sciences
+                    </span>
+                    <br />
+                    <br />
+                    <p>
+                        <a href="https://tsu.ge/en/" target="_blank" class="btn btn-primary">
+                            Visit Website <i class="fa fa-external-link"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="nowrap row-left-title col-xs-12 col-md-4 col-lg-3">
+                <h2><i class="fa fa-language"></i> Languages</h2>
+            </div>
+            <div class="col-xs-12 col-md-8 col-lg-9 scroll-container">
+                <div class="lang-list">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <a href="https://en.wikipedia.org/wiki/Georgian_language" target="_blank" class="btn btn-link">
+                            Georgian <span class="label label-primary">Native</span>
+                            </a>
+                        </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <a href="https://en.wikipedia.org/wiki/English_language" target="_blank" class="btn btn-link">
+                            English <span class="label label-primary">Fluent</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <a href="https://en.wikipedia.org/wiki/Russian_language" target="_blank" class="btn btn-link">
+                            Russian <span class="label label-primary">Good</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

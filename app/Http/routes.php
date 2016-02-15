@@ -12,8 +12,21 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('about');
 });
+Route::get('notes/{note}', function ($note) {
+    if (view()->exists('notes.' . $note)) {
+        return view('notes.' . $note);
+    }
+    abort(404);
+});
+Route::get('micro-services/{service}', function ($service) {
+    if (view()->exists('micro-services.' . $service)) {
+        return view('micro-services.' . $service);
+    }
+    abort(404);
+});
+
 Route::group(['prefix' => 'api'], function () {
     Route::get('user-info', function () {
         $ret['ip'] = $_SERVER['REMOTE_ADDR'];

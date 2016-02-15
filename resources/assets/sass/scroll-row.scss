@@ -1,0 +1,36 @@
+.scroll-container {
+    .skill-list {
+        margin:25px 50px 25px 50px;
+        overflow: auto;
+        position: relative;
+        height: 45px;
+    }
+    .skill-list::-webkit-scrollbar { 
+        display: none; 
+    }
+    .skill-list a {
+        
+        font-size: 1.3em;
+    }
+    .skill-list .scrollable {
+        position: absolute;
+        white-space: nowrap;
+    }
+    .scroll-arrow {
+        position: absolute;
+        top: 20px;
+    }
+    .scroll-right {
+        left: 10px;
+    }
+    .scroll-left {
+        right: 10px;
+    }
+    .scroll-arrow a {
+        display: inline-block;
+        font-size: 1.8em;
+        border: none;
+        box-shadow: none;
+        color: #333;
+    }
+}

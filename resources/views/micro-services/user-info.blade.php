@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Laravel Continuous Deployment on VPS over Github')
+@section('title', 'User Info')
 
 @section('content')
     <div class="jumbotron">

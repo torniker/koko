@@ -3,10 +3,11 @@
 //     elements: "a", // default is "a[href], form[action]" 
 //     selectors: ["title", ".my-Header", ".my-Content", ".my-Sidebar"]
 // })
-$(function() {
-
+import Vue from 'vue';
+import './vue/loaders/index';
+new Vue({
+    el: '#app',
 });
-
 (function($) {
     $.fn.scrollRow = function(options) {
         var settings = $.extend({

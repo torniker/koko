@@ -12,8 +12,9 @@
     <script src="/js/app.js" defer></script>
 </head>
 <body>
-    @include('navigation')
-
-    @yield('content')
+    <div id="app">
+        @include('navigation')
+        @yield('content')
+    </div>
 </body>
 </html>

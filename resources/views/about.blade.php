@@ -285,4 +285,116 @@
             </div>
         </div>
     </div>
+    <div class="jumbotron">
+        <div id="projects" class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
+                <h4>Content Management System</h4>
+                <span class="text-muted">
+                    Custom Content Management System (CMS) for governmental, nongovernmental and media agencies.
+                    System is very flexible. Development started in 2013, using CodeIgniter,
+                    but after Laravel gained it's popularity CMS moved to Laravel.
+                </span>
+                <br><br>
+                <span>
+                    <strong>Features:</strong>
+                    <span class="label label-primary">Category Management</span>
+                    <span class="label label-primary">Text Pages</span>
+                    <span class="label label-primary">Polls</span>
+                    <span class="label label-primary">Diagram Builder</span>
+                    <span class="label label-primary">Form Builder</span>
+                    <span class="label label-primary">Google Maps</span>
+                    <span class="label label-primary">Google Calendar</span>
+                    <span class="label label-primary">Custom Maps</span>
+                    <span class="label label-primary">User Management</span>
+                    <span class="label label-primary">Permissions</span>
+                    <span class="label label-primary">Roles</span>
+                </span>
+                <br><br>
+                <span>
+                    <strong>Built using:</strong>
+                    <span class="label label-primary">CodeIgniter</span>
+                    <span class="label label-primary">Laravel</span>
+                    <span class="label label-primary">jQuery</span>
+                    <span class="label label-primary">Twitter Bootstrap</span>
+                    <span class="label label-primary">Composer</span>
+                    <span class="label label-primary">Vagrant (Homestead)</span>
+                    <span class="label label-primary">Git</span>
+                </span>
+            </div>
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                <div class="text-center"><i class="fa fa-graduation-cap fa-5x"></i></div>
+                <h4>Learning Management System</h4>
+                <span class="text-muted">
+                    Learning Management System (LMS) for one of the biggest university in Georgia.
+                    This system enables students, administration and academic personnel to coordinate the learning process.
+                </span>
+                <br><br>
+                <span>
+                    <strong>Features:</strong>
+                    <span class="label label-primary">Faculties’ Management</span>
+                    <span class="label label-primary">Programs’ Management</span>
+                    <span class="label label-primary">Courses’ Management</span>
+                    <span class="label label-primary">Semester Management</span>
+                    <span class="label label-primary">Students’ Management</span>
+                    <span class="label label-primary">Lecturers’ Management</span>
+                    <span class="label label-primary">Registration on Courses</span>
+                    <span class="label label-primary">University Calendar Management</span>
+                    <span class="label label-primary">Evaluation System</span>
+                    <span class="label label-primary">Course Materials Management</span>
+                    <span class="label label-primary">Variety of Reports</span>
+                </span>
+                <br><br>
+                <span>
+                    <strong>Built using:</strong>
+                    <span class="label label-primary">CodeIgniter</span>
+                    <span class="label label-primary">jQuery</span>
+                    <span class="label label-primary">Twitter Bootstrap</span>
+                    <span class="label label-primary">Composer</span>
+                    <span class="label label-primary">Git</span>
+                </span>
+            </div>
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                    <div class="text-center"><i class="fa fa-university fa-5x"></i></div>
+                    <h4>Billing &amp; Financial Analysis</h4>
+                    <span class="text-muted">
+                        System for Billing and financial analysis for universities.
+                        System is build on Laravel 5.1 + vuejs. It's a single page application with RESTful API.
+                        The project was build using Domain Driven Design (DDD) and SOLID principles.
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        <strong>Features:</strong>
+                        <span class="label label-primary">Sponsors’ management</span>
+                        <span class="label label-primary">Accounts’ management</span>
+                        <span class="label label-primary">Holiday management</span>
+                        <span class="label label-primary">Payment plans’ management</span>
+                        <span class="label label-primary">Student contracts’ management</span>
+                        <span class="label label-primary">Obligations’ management</span>
+                        <span class="label label-primary">Variety of reports</span>
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        <strong>Built using:</strong>
+                        <span class="label label-primary">Laravel</span>
+                        <span class="label label-primary">Doctrine</span>
+                        <span class="label label-primary">Vuejs</span>
+                        <span class="label label-primary">Twitter Bootstrap</span>
+                        <span class="label label-primary">Composer</span>
+                        <span class="label label-primary">Git</span>
+                        <span class="label label-primary">Docker</span>
+                        <span class="label label-primary">Vagrant (Homestead)</span>
+                        <span class="label label-primary">Domain Driven Design (DDD)</span>
+                        <span class="label label-primary">NodeJS</span>
+                        <span class="label label-primary">Redis</span>
+                        <span class="label label-primary">SOLID</span>
+                        <span class="label label-primary">Test Driven Development (TDD)</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     Tornike Razmadze
                 </a>
             </div>
@@ -24,6 +24,9 @@
                         <ul class="dropdown-menu" >
                             <li class="{{ $isActive('notes/my-sublime-setup-for-php-development') }}">
                                 <a href="/notes/my-sublime-setup-for-php-development">My Sublime Setup for PHP Development</a>
+                            </li>
+                            <li class="{{ $isActive('notes/laravel-build-and-deployment-on-vps-over-github') }}">
+                                <a href="/notes/laravel-build-and-deployment-on-vps-over-github">Laravel Continuous Deployment on VPS over Github</a>
                             </li>
                         </ul>
                     </li>

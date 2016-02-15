@@ -15,7 +15,7 @@ body {
 nav.navbar {
     margin-bottom: 0px;
 }
- .content p {
+ .content {
     font-size: 1.5em;
 }
 .nowrap {
@@ -43,4 +43,11 @@ nav.navbar {
     a {
         font-size: 1.3em;
     }
+}
+.hidden-input {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    z-index: -11;
 }

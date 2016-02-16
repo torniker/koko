@@ -32,7 +32,7 @@
             <h3>
                 User settings of sublime
             </h3>
-            <script src="https://gist.github.com/torniker/0d4cf1e1ab0ff10a8fda.js"></script>
+            <github-gist gist-id="0d4cf1e1ab0ff10a8fda"></github-gist>
             <hr>
             <h3>
                 The List of installed packages.
@@ -124,13 +124,13 @@
 
                 <div class="col-xs-12 col-sm-6 tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="codeformatter">
-                        <script src="https://gist.github.com/torniker/b9181216304a85574885.js"></script>
+                        <github-gist gist-id="b9181216304a85574885"></github-gist>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="phpcompanion">
-                        <script src="https://gist.github.com/torniker/a7125e26be481a76db45.js"></script>
+                        <github-gist gist-id="a7125e26be481a76db45"></github-gist>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="phpfmt">
-                        <script src="https://gist.github.com/torniker/0e00593cbc1f12bed511.js"></script>
+                        <github-gist gist-id="0e00593cbc1f12bed511"></github-gist>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
             <h3>
                 Custom Key Binding
             </h3>
-            <script src="https://gist.github.com/torniker/b7462d9b8b17065cbf90.js"></script>
+            <github-gist gist-id="b7462d9b8b17065cbf90"></github-gist>
         </div>
     </div>
 @endsection

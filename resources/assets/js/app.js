@@ -1,25 +1,24 @@
 import Pjax from 'pjax';
 import NProgress from 'nprogress';
+import Vue from 'vue';
+Vue.use(require('vue-resource'));
+import app from './vue/app.vue';
+
 new Pjax({
     elements: 'a',
     selectors: ['#app', 'title']
 });
+var root = new Vue(app);
 document.addEventListener("pjax:success", function() {
-    var root = new Vue(app);
+    root = new Vue(app);
 });
 document.addEventListener("pjax:send", function() {
+    root.$destroy();
     NProgress.start();
 });
 document.addEventListener("pjax:complete", function() {
     NProgress.done();
 });
-// $(document).on('pjax:start', function() { NProgress.start(); });
-// $(document).on('pjax:end',   function() { NProgress.done();  });
-import Vue from 'vue';
-Vue.use(require('vue-resource'));
-import app from './vue/app.vue';
-
-
 (function($) {
     $.fn.scrollRow = function(options) {
         var settings = $.extend({

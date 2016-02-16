@@ -72,24 +72,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	_vue2.default.use(__webpack_require__(27));
+
 	new _pjax2.default({
 	    elements: 'a',
 	    selectors: ['#app', 'title']
 	});
+	var root = new _vue2.default(_app2.default);
 	document.addEventListener("pjax:success", function () {
-	    var root = new _vue2.default(_app2.default);
+	    root = new _vue2.default(_app2.default);
 	});
 	document.addEventListener("pjax:send", function () {
+	    root.$destroy();
 	    _nprogress2.default.start();
 	});
 	document.addEventListener("pjax:complete", function () {
 	    _nprogress2.default.done();
 	});
-	// $(document).on('pjax:start', function() { NProgress.start(); });
-	// $(document).on('pjax:end',   function() { NProgress.done();  });
-
-	_vue2.default.use(__webpack_require__(24));
-
 	(function ($) {
 	    $.fn.scrollRow = function (options) {
 	        var settings = $.extend({
@@ -11399,7 +11398,8 @@
 		"./app.vue": 10,
 		"./dateConverter.vue": 17,
 		"./molecules/copyToClipboard.vue": 19,
-		"./userInfo.vue": 22
+		"./molecules/githubGist.vue": 22,
+		"./userInfo.vue": 25
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11588,6 +11588,84 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] resources/assets/js/vue/molecules/githubGist.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(24)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/koko/Code/KoKo/tornike/resources/assets/js/vue/molecules/githubGist.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <link rel="stylesheet" type="text/css" :href="stylesheet">
+	//     {{{ content }}}
+	// </template>
+	// <script>
+	exports.default = {
+	    props: {
+	        gistId: {
+	            type: String,
+	            default: ''
+	        },
+	        stylesheet: {
+	            type: String,
+	            default: ''
+	        },
+	        content: {
+	            type: String,
+	            default: ''
+	        }
+	    },
+	    ready: function ready() {
+	        this.$http.jsonp('https://gist.github.com/' + this.gistId + '.json').then(this.success);
+	    },
+
+	    methods: {
+	        success: function success(response) {
+	            this.stylesheet = response.data.stylesheet;
+	            this.content = response.data.div;
+	        }
+	    }
+	};
+	// </script>
+
+	module.exports = exports['default'];
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<link rel=\"stylesheet\" type=\"text/css\" :href=\"stylesheet\">\n{{{ content }}}\n";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(26)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] resources/assets/js/vue/userInfo.vue: named exports in *.vue files are ignored.")}
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -11607,7 +11685,7 @@
 	})()}
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11649,7 +11727,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11658,16 +11736,16 @@
 
 	function install(Vue) {
 
-	    var _ = __webpack_require__(25);
+	    var _ = __webpack_require__(28);
 
 	    _.config = Vue.config;
 	    _.warning = Vue.util.warn;
 	    _.nextTick = Vue.util.nextTick;
 
-	    Vue.url = __webpack_require__(26);
-	    Vue.http = __webpack_require__(32);
-	    Vue.resource = __webpack_require__(47);
-	    Vue.Promise = __webpack_require__(34);
+	    Vue.url = __webpack_require__(29);
+	    Vue.http = __webpack_require__(35);
+	    Vue.resource = __webpack_require__(50);
+	    Vue.Promise = __webpack_require__(37);
 
 	    Object.defineProperties(Vue.prototype, {
 
@@ -11708,7 +11786,7 @@
 
 
 /***/ },
-/* 25 */
+/* 28 */
 /***/ function(module, exports) {
 
 	/**
@@ -11836,14 +11914,14 @@
 
 
 /***/ },
-/* 26 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for URL templating.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 	var ie = document.documentMode;
 	var el = document.createElement('a');
 
@@ -11879,10 +11957,10 @@
 	 */
 
 	Url.transforms = [
-	    __webpack_require__(27),
-	    __webpack_require__(29),
 	    __webpack_require__(30),
-	    __webpack_require__(31)
+	    __webpack_require__(32),
+	    __webpack_require__(33),
+	    __webpack_require__(34)
 	];
 
 	/**
@@ -11972,14 +12050,14 @@
 
 
 /***/ },
-/* 27 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * URL Template (RFC 6570) Transform.
 	 */
 
-	var UrlTemplate = __webpack_require__(28);
+	var UrlTemplate = __webpack_require__(31);
 
 	module.exports = function (options) {
 
@@ -11994,7 +12072,7 @@
 
 
 /***/ },
-/* 28 */
+/* 31 */
 /***/ function(module, exports) {
 
 	/**
@@ -12150,14 +12228,14 @@
 
 
 /***/ },
-/* 29 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Legacy Transform.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = function (options, next) {
 
@@ -12202,14 +12280,14 @@
 
 
 /***/ },
-/* 30 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Query Parameter Transform.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = function (options, next) {
 
@@ -12232,14 +12310,14 @@
 
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Root Prefix Transform.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = function (options, next) {
 
@@ -12254,17 +12332,17 @@
 
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for sending network requests.
 	 */
 
-	var _ = __webpack_require__(25);
-	var Client = __webpack_require__(33);
-	var Promise = __webpack_require__(34);
-	var interceptor = __webpack_require__(37);
+	var _ = __webpack_require__(28);
+	var Client = __webpack_require__(36);
+	var Promise = __webpack_require__(37);
+	var interceptor = __webpack_require__(40);
 	var jsonType = {'Content-Type': 'application/json'};
 
 	function Http(url, options) {
@@ -12317,13 +12395,13 @@
 	};
 
 	Http.interceptors = [
-	    __webpack_require__(38),
-	    __webpack_require__(39),
-	    __webpack_require__(40),
+	    __webpack_require__(41),
 	    __webpack_require__(42),
 	    __webpack_require__(43),
-	    __webpack_require__(44),
-	    __webpack_require__(45)
+	    __webpack_require__(45),
+	    __webpack_require__(46),
+	    __webpack_require__(47),
+	    __webpack_require__(48)
 	];
 
 	Http.headers = {
@@ -12358,16 +12436,16 @@
 
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Base client.
 	 */
 
-	var _ = __webpack_require__(25);
-	var Promise = __webpack_require__(34);
-	var xhrClient = __webpack_require__(36);
+	var _ = __webpack_require__(28);
+	var Promise = __webpack_require__(37);
+	var xhrClient = __webpack_require__(39);
 
 	module.exports = function (request) {
 
@@ -12429,15 +12507,15 @@
 
 
 /***/ },
-/* 34 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Promise adapter.
 	 */
 
-	var _ = __webpack_require__(25);
-	var PromiseObj = window.Promise || __webpack_require__(35);
+	var _ = __webpack_require__(28);
+	var PromiseObj = window.Promise || __webpack_require__(38);
 
 	function Promise(executor, context) {
 
@@ -12544,14 +12622,14 @@
 
 
 /***/ },
-/* 35 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Promises/A+ polyfill v1.1.4 (https://github.com/bramstein/promis)
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	var RESOLVED = 0;
 	var REJECTED = 1;
@@ -12729,15 +12807,15 @@
 
 
 /***/ },
-/* 36 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * XMLHttp client.
 	 */
 
-	var _ = __webpack_require__(25);
-	var Promise = __webpack_require__(34);
+	var _ = __webpack_require__(28);
+	var Promise = __webpack_require__(37);
 
 	module.exports = function (request) {
 	    return new Promise(function (resolve) {
@@ -12785,15 +12863,15 @@
 
 
 /***/ },
-/* 37 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Interceptor factory.
 	 */
 
-	var _ = __webpack_require__(25);
-	var Promise = __webpack_require__(34);
+	var _ = __webpack_require__(28);
+	var Promise = __webpack_require__(37);
 
 	module.exports = function (handler, vm) {
 
@@ -12836,14 +12914,14 @@
 
 
 /***/ },
-/* 38 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Before Interceptor.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = {
 
@@ -12860,7 +12938,7 @@
 
 
 /***/ },
-/* 39 */
+/* 42 */
 /***/ function(module, exports) {
 
 	/**
@@ -12896,14 +12974,14 @@
 
 
 /***/ },
-/* 40 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * JSONP Interceptor.
 	 */
 
-	var jsonpClient = __webpack_require__(41);
+	var jsonpClient = __webpack_require__(44);
 
 	module.exports = {
 
@@ -12920,15 +12998,15 @@
 
 
 /***/ },
-/* 41 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * JSONP client.
 	 */
 
-	var _ = __webpack_require__(25);
-	var Promise = __webpack_require__(34);
+	var _ = __webpack_require__(28);
+	var Promise = __webpack_require__(37);
 
 	module.exports = function (request) {
 	    return new Promise(function (resolve) {
@@ -12974,7 +13052,7 @@
 
 
 /***/ },
-/* 42 */
+/* 45 */
 /***/ function(module, exports) {
 
 	/**
@@ -12997,14 +13075,14 @@
 
 
 /***/ },
-/* 43 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Mime Interceptor.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = {
 
@@ -13039,14 +13117,14 @@
 
 
 /***/ },
-/* 44 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Header Interceptor.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	module.exports = {
 
@@ -13071,15 +13149,15 @@
 
 
 /***/ },
-/* 45 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * CORS Interceptor.
 	 */
 
-	var _ = __webpack_require__(25);
-	var xdrClient = __webpack_require__(46);
+	var _ = __webpack_require__(28);
+	var xdrClient = __webpack_require__(49);
 	var xhrCors = 'withCredentials' in new XMLHttpRequest();
 	var originUrl = _.url.parse(location.href);
 
@@ -13114,15 +13192,15 @@
 
 
 /***/ },
-/* 46 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * XDomain client (Internet Explorer).
 	 */
 
-	var _ = __webpack_require__(25);
-	var Promise = __webpack_require__(34);
+	var _ = __webpack_require__(28);
+	var Promise = __webpack_require__(37);
 
 	module.exports = function (request) {
 	    return new Promise(function (resolve) {
@@ -13157,14 +13235,14 @@
 
 
 /***/ },
-/* 47 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for interacting with RESTful services.
 	 */
 
-	var _ = __webpack_require__(25);
+	var _ = __webpack_require__(28);
 
 	function Resource(url, params, actions, options) {
 

@@ -54,7 +54,7 @@
         </ul>
         <p>
             List of commands to install all softwares listed above:
-            <script src="https://gist.github.com/torniker/ee290504a5591c08e5d3.js"></script>
+            <github-gist gist-id="ee290504a5591c08e5d3"></github-gist>
             Now lets create directories needed for the deployment and the project:
             <pre>mkdir /home/user/deploy
 mkdir /home/user/deploy/files
@@ -64,7 +64,7 @@ vim /home/user/.env #put your env data in here</pre>
         </p>
         <p>
             Create two files in /etc/nginx/sites-available/ domain.com and deploy.domain.com and put following configuration in it:
-            <script src="https://gist.github.com/torniker/bb89fd18ec4a999b4127.js"></script>
+            <github-gist gist-id="bb89fd18ec4a999b4127"></github-gist>
             You need to change server_name and root for deploy.domain.com to
             <pre>server_name deploy.domain.com;
 root "/home/user/deploy/public";</pre>
@@ -87,9 +87,9 @@ sudo service nginx restart</pre>
             Put the following files into corresponding folders:
             <br>
             /home/user/deploy/build.sh
-            <script src="https://gist.github.com/torniker/9037d147d0582ca9777b.js"></script>
+            <github-gist gist-id="9037d147d0582ca9777b"></github-gist>
             /home/user/deploy/public/index.php
-            <script src="https://gist.github.com/torniker/23002efbb2c62241bf99.js"></script>
+            <github-gist gist-id="23002efbb2c62241bf99"></github-gist>
         </p>
         <p>
             Now you should configure github repository to request deploy.domain.com on push event.

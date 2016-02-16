@@ -2,6 +2,7 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/bootswatch/paper/_bootswatch";
 @import "node_modules/font-awesome/scss/font-awesome";
+@import "nprogress";
 @import "scroll-row";
 @font-face {
     font-family: Ubuntu;
@@ -16,7 +17,10 @@ nav.navbar {
     margin-bottom: 0px;
 }
  .content {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    .original-font-size {
+        font-size: 0.8em; 
+    }
 }
 .nowrap {
     white-space: nowrap;

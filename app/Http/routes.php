@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
  */
-
+sleep(2);
 Route::get('/', function () {
     return view('about');
 });

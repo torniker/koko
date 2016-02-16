@@ -1,5 +1,4 @@
 import Vue from 'vue';
-Vue.use(require('vue-resource'));
 import {
     basename
 }
@@ -13,7 +12,6 @@ var modules = context
         obj[basename(path, '.js')] = context(path);
         return obj;
     }, {});
-
 for (let key in modules.components) {
     Vue.component(key, modules.components[key]);
 }

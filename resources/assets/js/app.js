@@ -1,13 +1,25 @@
-// import Pjax from 'pjax';
-// new Pjax({
-//     elements: "a", // default is "a[href], form[action]" 
-//     selectors: ["title", ".my-Header", ".my-Content", ".my-Sidebar"]
-// })
-import Vue from 'vue';
-import './vue/loaders/index';
-new Vue({
-    el: '#app',
+import Pjax from 'pjax';
+import NProgress from 'nprogress';
+new Pjax({
+    elements: 'a',
+    selectors: ['#app', 'title']
 });
+document.addEventListener("pjax:success", function() {
+    var root = new Vue(app);
+});
+document.addEventListener("pjax:send", function() {
+    NProgress.start();
+});
+document.addEventListener("pjax:complete", function() {
+    NProgress.done();
+});
+// $(document).on('pjax:start', function() { NProgress.start(); });
+// $(document).on('pjax:end',   function() { NProgress.done();  });
+import Vue from 'vue';
+Vue.use(require('vue-resource'));
+import app from './vue/app.vue';
+
+
 (function($) {
     $.fn.scrollRow = function(options) {
         var settings = $.extend({

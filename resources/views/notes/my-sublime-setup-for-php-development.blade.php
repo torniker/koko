@@ -41,7 +41,7 @@
             </h3>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <ul class="nav nav-tabs nav-stacked" role="tablist">
+                    <ul class="nav nav-tabs nav-stacked original-font-size" role="tablist">
                         <li>
                             <a href="https://github.com/skuroda/Sublime-AdvancedNewFile" target="_blank">
                                 Advanced New File

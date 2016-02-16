@@ -3,7 +3,7 @@ export default {
     props: {
         length: {
             type: Number,
-            default: 9
+            default: 10
         },
         strength: {
             type: Number,
@@ -16,8 +16,8 @@ export default {
                     'abcdefghijklnopqrstuvwxyz',
                     'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
                     '0123456789',
-                    '_-.',
-                    '!@#$%^&*()'
+                    '_-.:;',
+                    '!@#$%^&*()[]{}|'
                 ];
             }
         }

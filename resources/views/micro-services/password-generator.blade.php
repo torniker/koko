@@ -20,10 +20,10 @@
                     Generated Password
                 </h3>
                 <password-generator inline-template>
-                <div class="col-xs-2">
+                <div class="col-xs-4 col-sm-2 col-lg-1">
                     <input type="number" class="form-control input-lg text-center" v-model="length">
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-8 col-sm-3 col-lg-2">
                     <select class="form-control input-lg" v-model="strength">
                         <option value="1">Easy</option>
                         <option value="2">Medium</option>
@@ -32,7 +32,7 @@
                         <option value="5">Imposible</option>
                     </select>
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-sm-7 col-lg-9">
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button class="btn btn-lg btn-default" type="button" v-on:click="generateNewPassword">

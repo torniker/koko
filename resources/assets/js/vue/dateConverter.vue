@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         timestamp: {
-            get(){
+            get() {
                 return this.ts;
             },
             set(newVal) {
@@ -27,9 +27,12 @@ export default {
         }
     },
     methods: {
-        onSubmit: function(e) {
+        onSubmit(e) {
             e.preventDefault();
             this.calculateValues();
+        },
+        onFocus(e) {
+            e.target.setSelectionRange(0,e.target.value.length);
         },
         calculateValues: function() {
             var date = this.date;

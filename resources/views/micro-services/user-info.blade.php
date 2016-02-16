@@ -33,7 +33,7 @@
                         User Agent
                     </h3>
                     <div class="input-group">
-                        <input id="userAgentInput" class="form-control input-lg text-center" value="@{{ userAgent }}" readonly>
+                        <input class="form-control input-lg text-center" value="@{{ userAgent }}" readonly>
                         <span class="input-group-btn">
                             <copy-to-clipboard :value="userAgent"></copy-to-clipboard>
                         </span>

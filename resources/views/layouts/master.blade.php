@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
 
+    <link rel="alternate" href="http://tornike.me" hreflang="en">
+
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <script src="/js/jquery.min.js" defer></script>
     <script src="/js/bootstrap.min.js" defer></script>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'User Info')
+@section('title', 'Date Converter')
 
 @section('content')
     <div class="jumbotron">
@@ -28,11 +28,11 @@
                                 <i class="fa fa-caret-right"></i>
                             </button>
                         </span>
-                        <input class="form-control input-lg text-center" on-focus="onFocus" v-model="timestamp">
+                        <input class="form-control input-lg text-center" v-on:focus="onFocus" v-model="timestamp">
                         <span class="input-group-btn">
                             <copy-to-clipboard :value="timestamp"></copy-to-clipboard>
                         </span>
-                        <input class="form-control input-lg text-center" on-focus="onFocus" :value="calculatedDate" readonly>
+                        <input class="form-control input-lg text-center" v-on:focus="onFocus" :value="calculatedDate" readonly>
                         <span class="input-group-btn">
                             <copy-to-clipboard :value="calculatedDate"></copy-to-clipboard>
                         </span>

@@ -100,5 +100,8 @@ sudo service nginx restart</pre>
             It can have permission problems, because php is running using www-data user on the server.
             There are many ways to fix this, simply you can make www-data an owner of all files and folder in /home/user.
         </p>
+        <p>
+            Also you may need to <a href="http://codinghobo.com/opcache-and-symlink-based-deployments/" target="_blank">clean your OpCache after deploy</a>.
+        </p>
     </div>
 @endsection

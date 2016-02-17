@@ -1,6 +1,7 @@
 @import "node_modules/bootswatch/paper/_variables";
+$font-family-sans-serif:  "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/bootswatch/paper/_bootswatch";
+@import "bootswatch";
 @import "node_modules/font-awesome/scss/font-awesome";
 @import "nprogress";
 @import "scroll-row";

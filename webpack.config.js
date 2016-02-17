@@ -1,9 +1,17 @@
+var webpack = require('webpack');
+var ENV = process.env.APP_ENV || 'production';
+console.log(ENV);
 module.exports = {
     entry: "./resources/assets/js/app.js",
     output: {
         path: "./public/js",
         filename: "app.js",
     },
+    plugins: (ENV == 'production') ? [
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true
+        })
+    ] : [],
     resolve: {
         modulesDirectories: ['./node_modules', './resources/assets/js/'],
     },

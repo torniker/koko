@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
+var cssnano = require('gulp-cssnano');
 
 function copy(from, to) {
     return gulp.src(from)
@@ -28,6 +29,7 @@ gulp.task('sass', function(cb) {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(cssnano())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/css'));
 });

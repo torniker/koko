@@ -61,7 +61,6 @@ document.addEventListener("pjax:complete", function() {
             this.scrollTo(scrollTo);
         }
         rightArrowCallback(e) {
-            console.log('b');
             e.preventDefault();
             var scrollPos = $(this.container).scrollLeft();
             var scrollTo = scrollPos;

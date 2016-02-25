@@ -42,19 +42,16 @@ document.addEventListener("pjax:complete", function() {
         constructor(settings) {
             this.leftArrow = $(settings.leftArrow);
             this.rightArrow = $(settings.rightArrow);
-            this.scrollable = $(settings.scrollable);
-            this.container = $(settings.container);
+            this.scrollable = settings.scrollable;
+            this.container = settings.container;
             this.step = settings.step;
-            this.setListeners();
-        }
-        setListeners() {
-            this.leftArrow.on('click', this.leftArrowCallback.bind(this));
-            this.rightArrow.on('click', this.rightArrowCallback.bind(this));
+            $(document).on('click', settings.leftArrow, this.leftArrowCallback.bind(this));
+            $(document).on('click', settings.rightArrow, this.rightArrowCallback.bind(this));
         }
         leftArrowCallback(e) {
             e.preventDefault();
-            var scrollPos = this.container.scrollLeft();
-            var width = this.scrollable.width();
+            var scrollPos = $(this.container).scrollLeft();
+            var width = $(this.scrollable).width();
             var scrollTo = scrollPos;
             if (width < this.step + scrollTo) {
                 scrollTo = width;
@@ -64,8 +61,9 @@ document.addEventListener("pjax:complete", function() {
             this.scrollTo(scrollTo);
         }
         rightArrowCallback(e) {
+            console.log('b');
             e.preventDefault();
-            var scrollPos = this.container.scrollLeft();
+            var scrollPos = $(this.container).scrollLeft();
             var scrollTo = scrollPos;
             if (this.scrollTo - this.step < 0) {
                 scrollTo = 0;
@@ -75,7 +73,7 @@ document.addEventListener("pjax:complete", function() {
             this.scrollTo(scrollTo);
         }
         scrollTo(scrollTo) {
-            this.container.animate({
+            $(this.container).animate({
                 scrollLeft: scrollTo
             }, 200);
         }

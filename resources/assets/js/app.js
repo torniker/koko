@@ -6,7 +6,14 @@ import app from './vue/app.vue';
 
 new Pjax({
     elements: 'a',
-    selectors: ['#app', 'title']
+    selectors: ['#app', 'title'],
+    analytics: function() {
+        window.ga('send', 'pageview', {
+            page: document.location.pathname,
+            title: document.title
+        })
+    }
+
 });
 var root = new Vue(app);
 document.addEventListener("pjax:success", function() {

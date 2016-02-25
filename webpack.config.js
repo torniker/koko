@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var ENV = process.env.APP_ENV || 'production';
-console.log(ENV);
 module.exports = {
     entry: "./resources/assets/js/app.js",
     output: {

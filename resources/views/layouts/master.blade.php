@@ -8,7 +8,7 @@
 
     <link rel="alternate" href="http://tornike.me" hreflang="en">
 
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet" media="all">
     <script src="/js/jquery.min.js" defer></script>
     <script src="/js/bootstrap.min.js" defer></script>
     <script src="/js/app.js" defer></script>

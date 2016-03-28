@@ -44,9 +44,6 @@
                             <li class="{{ $isActive('micro-services/password-generator') }}">
                                 <a href="/micro-services/password-generator">Password Generator</a>
                             </li>
-                            <li class="{{ $isActive('micro-services/password-hasher') }}">
-                                <a href="/micro-services/password-hasher">Password Hasher</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>

@@ -39,7 +39,10 @@ nav.navbar {
     }
 }
 .experience {
-    height: 470px;
+    margin-bottom:50px;
+    .xpcompanies {
+        font-size: 1.5em;
+    }
 }
 .lang-list {
     margin:26px 50px;

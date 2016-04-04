@@ -78,144 +78,36 @@
             <h2><i class="fa fa-briefcase"></i> Work Experience</h2>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <ul class="nav nav-tabs nav-stacked xpcompanies" role="tablist">
-                    <li class="active">
-                        <a href="#xpitdc" role="tab" data-toggle="tab" class="h5">
-                            ITDC
-                            <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+            <div class="col-xs-12">
+                <div class="list-group xpcompanies">
+                        <a href="http://shift.com/" target="_blank" class="list-group-item">
+                            Senior Software Engineer @ Shift Technologies
+                            <span class="label label-primary pull-right">2016 - Present</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#xpgeodna" role="tab" data-toggle="tab" class="h5">
-                            GeoDNA
-                            <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                        <a href="http://training.itdc.ge/" target="_blank" class="list-group-item">
+                            Trainer @ ITDC
+                            <span class="label label-primary pull-right">2012 - Present</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#xpilia" role="tab" data-toggle="tab" class="h5">
-                            Ilia State University
-                            <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                        <a href="http://oceandna.ge/" target="_blank" class="list-group-item">
+                            Data Manager @ GeoDNA
+                            <span class="label label-primary pull-right">2006 - Present</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#xpibsu" role="tab" data-toggle="tab" class="h5">
-                            International Black Sea Univrsity
-                            <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                        <a href="http://www.itdc.ge/index.php?lang_id=ENG" target="_blank" class="list-group-item">
+                            Senior Developer @ ITDC
+                            <span class="label label-primary pull-right">2008 - 2016</span>
                         </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6 tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="xpitdc">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdcsenior">
-                                        Senior Developer <small>2008 - present</small>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="itdcsenior" class="collapse in" role="tabpanel">
-                                <div class="panel-body">
-                                    <strong>Responsibilities:</strong>
-                                    <ul>
-                                        <li>Analyze and Provide the business process recommendations in frame of project to the customer</li>
-                                        <li>Lead the team of project that involves 3-5 members</li>
-                                        <li>Instruct and assist the group members</li>
-                                        <li>Assign tasks to the members of the team</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdctrainer">
-                                        Trainer <small>2012 - present</small>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="itdctrainer" class="collapse" role="tabpanel">
-                                <div class="panel-body">
-                                    <strong>Responsibilities:</strong>
-                                    <ul>
-                                        <li>Create course syllabuses of Interface Development</li>
-                                        <li>Create course syllabuses of Web Programming and Databases</li>
-                                        <li>Supervisor of "Interface Development" trainers</li>
-                                        <li>"Web Programming and Databases" trainer</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading" role="tab">
-                                <h5 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#itdcdeveloper">
-                                        Developer <small>2006 - 2008</small>
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="itdcdeveloper" class="collapse" role="tabpanel">
-                                <div class="panel-body">
-                                    <strong>Responsibilities:</strong>
-                                    <ul>
-                                        <li>Analyze assigned task</li>
-                                        <li>Develop appropriate web-application or web-site</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="xpgeodna">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h5 class="panel-title">
-                                <a role="button" href="#geodnaxp">
-                                    Data Manager / Programmer / Server Admin <small>2006 - present</small>
-                                </a>
-                            </h5>
-                        </div>
-                        <div class="panel-body">
-                            <strong>Responsibilities:</strong>
-                            <ul>
-                                <li>Process, store and disseminate the marine data and metadata sampled by Georgian institutes and agencies</li>
-                                <li>Communicate with foreign partners</li>
-                                <li>Discuss and create formats according to suitable standard</li>
-                                <li>Participate in standard creation together with European partners</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="xpilia">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h5 class="panel-title">
-                                <a role="button" href="#geodnaxp">
-                                    Lecturer <small>2013 - 2014</small>
-                                </a>
-                            </h5>
-                        </div>
-                        <div class="panel-body">
-                            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL.
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="xpibsu">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h5 class="panel-title">
-                                <a role="button" href="#geodnaxp">
-                                    Lecturer <small>2013 - 2014</small>
-                                </a>
-                            </h5>
-                        </div>
-                        <div class="panel-body">
-                            Teaching Web Programming. Including basics of HTML, CSS and JavaScript. For server-side developemnt PHP and MySQL. The language of instruction has been English
-                        </div>
-                    </div>
+                        <a href="http://www.itdc.ge/index.php?lang_id=ENG" target="_blank" class="list-group-item">
+                            Developer @ ITDC
+                            <span class="label label-primary pull-right">2006 - 2008</span>
+                        </a>
+                        <a href="https://iliauni.edu.ge/en/" target="_blank" class="list-group-item">
+                            Lecturer @ Ilia State University
+                            <span class="label label-primary pull-right">2013 - 2014</span>
+                        </a>
+                        <a href="https://www.ibsu.edu.ge/en/" class="list-group-item">
+                            Lecturer @ International Black Sea Univrsity
+                            <span class="label label-primary pull-right">2013 - 2014</span>
+                        </a>
                 </div>
             </div>
         </div>

@@ -6,11 +6,11 @@ module.exports = {
         path: "./public/js",
         filename: "app.js",
     },
-    plugins: (ENV == 'production') ? [
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true
-        })
-    ] : [],
+    // plugins: (ENV == 'production') ? [
+    //     new webpack.optimize.UglifyJsPlugin({
+    //         minimize: true
+    //     })
+    // ] : [],
     resolve: {
         modulesDirectories: ['./node_modules', './resources/assets/js/'],
     },

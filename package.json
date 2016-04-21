@@ -26,6 +26,7 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5",
+    "highcharts": "^4.2.4",
     "jquery": "^2.1.4",
     "merge-stream": "^1.0.0",
     "nprogress": "^0.2.0",

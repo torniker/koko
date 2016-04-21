@@ -1,0 +1,36 @@
+[{
+    "labels": ["Area in m<sup>2</sup> (x)", "Price in USD (y)"],
+    "type": "line",
+    "name": "Linear Regression Line",
+    "data": [[67, 81000], [142, 122000]],
+    "marker": {
+        "enabled": false
+    },
+    "states": {
+        "hover": {
+            "lineWidth": 0
+        }
+    },
+    "enableMouseTracking": false
+}, {
+    "type": "scatter",
+    "name": "Dataset",
+    "labels": ["Area in m<sup>2</sup> (x)", "Price in USD (y)"],
+    "color": "rgba(223, 83, 83, .5)",
+    "data": [
+        [70, 80000],
+        [75, 88000],
+        [80, 95000],
+        [90, 101000],
+        [96, 104000],
+        [100, 106000],
+        [105, 107000],
+        [110, 108000],
+        [115, 110000],
+        [123, 112000],
+        [126, 111000],
+        [132, 114000],
+        [138, 116000],
+        [142, 116500]
+	]
+}]

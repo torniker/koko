@@ -21,6 +21,9 @@ export default {
             this.ip = response.data.ip;
             this.userAgent = response.data.userAgent;
         },
+        onFocus(e) {
+            e.target.setSelectionRange(0,e.target.value.length);
+        },
         error() {
             console.log('error');
         }

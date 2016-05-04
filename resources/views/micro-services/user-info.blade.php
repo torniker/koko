@@ -22,7 +22,7 @@
                         IP Address
                     </h3>
                     <div class="input-group">
-                        <input id="ipInput" class="form-control input-lg text-center" value="@{{ ip }}" readonly>
+                        <input id="ipInput" class="form-control input-lg text-center" v-on:focus="onFocus" value="@{{ ip }}" readonly>
                         <span class="input-group-btn">
                             <copy-to-clipboard :value="ip"></copy-to-clipboard>
                         </span>
@@ -33,7 +33,7 @@
                         User Agent
                     </h3>
                     <div class="input-group">
-                        <input class="form-control input-lg text-center" value="@{{ userAgent }}" readonly>
+                        <input class="form-control input-lg text-center" v-on:focus="onFocus" value="@{{ userAgent }}" readonly>
                         <span class="input-group-btn">
                             <copy-to-clipboard :value="userAgent"></copy-to-clipboard>
                         </span>

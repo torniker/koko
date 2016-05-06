@@ -115,7 +115,7 @@
                 data-provider="/json/unsupervised-tumor-dataset.json">
             </scatter-plot>
             <p>
-                So we have same data as in tumor problem, only without labels. And we need to find the groups fo data that can be seperated.
+                So we have same data as in tumor problem, only without labels. And we need to find the groups of data that can be seperated.
             </p>
         </div>
     </div>

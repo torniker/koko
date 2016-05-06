@@ -28,6 +28,9 @@
                             <li class="{{ $isActive('notes/laravel-build-and-deployment-on-vps-over-github') }}">
                                 <a href="/notes/laravel-build-and-deployment-on-vps-over-github">Laravel Continuous Deployment on VPS over Github</a>
                             </li>
+                            <li class="{{ $isActive('notes/machine-learning-overview') }}">
+                                <a href="/notes/machine-learning-overview">Machine Learning Overview</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown {{ $isActive('micro-services', 1) }}">

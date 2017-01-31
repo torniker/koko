@@ -25,11 +25,12 @@
                 </div>
                 <div class="skill-list">
                     <div class="scrollable">
+                        <a href="https://golang.org/" class="btn btn-link">Go (golang)</a>
                         <a href="http://php.net/" class="btn btn-link">PHP</a>
                         <a href="http://laravel.com/" class="btn btn-link">Laravel</a>
                         <a href="http://www.codeigniter.com/" class="btn btn-link">CodeIgniter</a>
                         <a href="https://en.wikipedia.org/wiki/SQL" class="btn btn-link">SQL Databases</a>
-                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link">JavaScript (ES 6/7)</a>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-link">JavaScript</a>
                         <a href="http://vuejs.org/" class="btn btn-link">Vue.js</a>
                         <a href="https://www.polymer-project.org/1.0/" class="btn btn-link">Polymer</a>
                         <a href="https://www.docker.com/" class="btn btn-link">Docker</a>

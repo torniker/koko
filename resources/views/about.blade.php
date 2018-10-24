@@ -186,9 +186,8 @@
                 <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
                 <h4>Content Management System</h4>
                 <span class="text-muted">
-                    MyDoc is a SaaS platform, which gives insurance companies, clinics, hospitals, doctors and other service providers
-                    in healthcare industry a tool for building telemedical platform on top of the existing flow, that would enable them
-                     to simplify and accelerate all types of communication, to reduce costs of provided services and much more.
+                    MyDoc is a SaaS platform, It's a tool for building telemedical platform on top of the existing flow,
+                    that would enable them to simplify and accelerate all types of communication, to reduce costs of provided services and much more.
                 </span>
                 <br><br>
                 <span>

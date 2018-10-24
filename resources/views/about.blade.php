@@ -188,16 +188,17 @@
                 <span class="text-muted">
                     MyDoc is a SaaS platform, which gives insurance companies, clinics, hospitals, doctors and other service providers
                     in healthcare industry a tool for building telemedical platform on top of the existing flow, that would enable them
-                    to create a sophisticated environment to simplify and accelerate all types of communication, to reduce costs of provided
-                    services and much more.
+                     to simplify and accelerate all types of communication, to reduce costs of provided services and much more.
                 </span>
                 <br><br>
                 <span>
                     <strong>Features:</strong>
                     <span class="label label-primary">Symptom Checker</span>
                     <span class="label label-primary">Health History Management</span>
+                    <span class="label label-primary">AI Based Diagnosis</span>
+                    <span class="label label-primary">Medical Document Sharing</span>
                     <span class="label label-primary">Text Chat</span>
-                    <span class="label label-primary">Video Chat</span>
+                    <span class="label label-primary">Video/Audio Chat</span>
                 </span>
                 <br><br>
                 <span>

@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown {{ $isActive('micro-services', 1) }}">
+                    <!-- <li class="dropdown {{ $isActive('micro-services', 1) }}">
                         <a role="button" class="dropdown-toggle" data-toggle="dropdown">
                             Micro Services <span class="caret"></span>
                         </a>
@@ -48,7 +48,7 @@
                                 <a href="/micro-services/password-generator">Password Generator</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>

@@ -212,6 +212,7 @@
                     <span class="label label-primary">Micro-services</span>
                     <span class="label label-primary">Git</span>
                 </span>
+                <br><br>
             </div>
             <div class="col-xs-12 col-sm-6 placeholder text-center">
                 <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
@@ -247,6 +248,7 @@
                     <span class="label label-primary">Vagrant (Homestead)</span>
                     <span class="label label-primary">Git</span>
                 </span>
+                <br><br>
             </div>
             <div class="col-xs-12 col-sm-6 placeholder text-center">
                 <div class="text-center"><i class="fa fa-graduation-cap fa-5x"></i></div>

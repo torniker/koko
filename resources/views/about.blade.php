@@ -184,7 +184,7 @@
             <h2 class="text-center">Projects</h2>
             <div class="col-xs-12 col-sm-6 placeholder text-center">
                 <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
-                <h4>Content Management System</h4>
+                <h4>MyDoc</h4>
                 <span class="text-muted">
                     MyDoc is a SaaS platform, It's a tool for building telemedical platform on top of the existing flow,
                     that would enable them to simplify and accelerate all types of communication, to reduce costs of provided services and much more.

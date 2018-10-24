@@ -34,13 +34,10 @@
                         <a href="http://vuejs.org/" class="btn btn-link">Vue.js</a>
                         <a href="https://www.polymer-project.org/1.0/" class="btn btn-link">Polymer</a>
                         <a href="https://www.docker.com/" class="btn btn-link">Docker</a>
-                        <a href="https://laravel.com/docs/master/homestead" class="btn btn-link">Vagrant (Homestead)</a>
                         <a href="https://en.wikipedia.org/wiki/NoSQL" class="btn btn-link">NoSQL</a>
                         <a href="https://nodejs.org/en/" class="btn btn-link">Node.js</a>
                         <a class="btn btn-link">HTML / CSS</a>
                         <a class="btn btn-link">SASS / LESS</a>
-                        <a href="http://developer.android.com/index.html" class="btn btn-link">Android Development</a>
-                        <a href="https://www.oracle.com/java/index.html" class="btn btn-link">Java</a>
                     </div>
                 </div>
                 <div class="scroll-arrow scroll-left text-center">
@@ -81,13 +78,17 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="list-group xpcompanies">
+                        <a href="https://mydoc.chat/" target="_blank" class="list-group-item">
+                            CTO / Co-founder @ MyDoc
+                            <span class="label label-primary pull-right">2017 - Present</span>
+                        </a>
                         <a href="http://shift.com/" target="_blank" class="list-group-item">
                             Senior Software Engineer @ Shift Technologies
-                            <span class="label label-primary pull-right">2016 - Present</span>
+                            <span class="label label-primary pull-right">2016 - 2017</span>
                         </a>
                         <a href="http://training.itdc.ge/" target="_blank" class="list-group-item">
                             Trainer @ ITDC
-                            <span class="label label-primary pull-right">2012 - Present</span>
+                            <span class="label label-primary pull-right">2012 - 2016</span>
                         </a>
                         <a href="http://oceandna.ge/" target="_blank" class="list-group-item">
                             Data Manager @ GeoDNA
@@ -181,6 +182,37 @@
     <div class="jumbotron">
         <div id="projects" class="container">
             <h2 class="text-center">Projects</h2>
+            <div class="col-xs-12 col-sm-6 placeholder text-center">
+                <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
+                <h4>Content Management System</h4>
+                <span class="text-muted">
+                    MyDoc is a SaaS platform, which gives insurance companies, clinics, hospitals, doctors and other service providers
+                    in healthcare industry a tool for building telemedical platform on top of the existing flow, that would enable them
+                    to create a sophisticated environment to simplify and accelerate all types of communication, to reduce costs of provided
+                    services and much more.
+                </span>
+                <br><br>
+                <span>
+                    <strong>Features:</strong>
+                    <span class="label label-primary">Symptom Checker</span>
+                    <span class="label label-primary">Health History Management</span>
+                    <span class="label label-primary">Text Chat</span>
+                    <span class="label label-primary">Video Chat</span>
+                </span>
+                <br><br>
+                <span>
+                    <strong>Built using:</strong>
+                    <span class="label label-primary">Go</span>
+                    <span class="label label-primary">Node.js</span>
+                    <span class="label label-primary">VueJS</span>
+                    <span class="label label-primary">Vuex</span>
+                    <span class="label label-primary">Nuxt</span>
+                    <span class="label label-primary">Postgres</span>
+                    <span class="label label-primary">Docker</span>
+                    <span class="label label-primary">Micro-services</span>
+                    <span class="label label-primary">Git</span>
+                </span>
+            </div>
             <div class="col-xs-12 col-sm-6 placeholder text-center">
                 <div class="text-center"><i class="fa fa-dashboard fa-5x"></i></div>
                 <h4>Content Management System</h4>
